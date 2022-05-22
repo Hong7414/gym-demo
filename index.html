@@ -5,65 +5,7 @@
         <title>健身資訊網站</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            body{
-                background-color: rgb(40, 40, 40);
-                color: aquamarine;
-                font-family: '標楷體';
-            }
-            #container{
-                margin: 20px auto;
-                width: 90%;
-                text-align: center;
-            }
-            .title{
-                color: rgb(40, 52, 219); 
-                background-color: rgb(163, 163, 167);
-                font-size: 48px;
-                border-radius: 8px;
-                height: 96px;
-                margin: 16px 0px;
-                padding: 12px 0px;
-                text-align: center;
-                line-height: 96px;
-            }
-            .sub-title{
-                color: cornflowerblue;
-                background-color: rgb(100, 100, 100);
-                font-size: 24PX;
-                border-radius: 8PX;
-                height: 48px;
-                margin: 12px 0px;
-                padding: 8px;
-                text-align: left;
-                line-height: 48px;
-            }
-            .text-1{
-                border: 2px black dotted;
-                margin-bottom: 12px;
-                padding: 6px;
-                background-color: rgb(68, 67, 67);
-            }
-            .text-2{
-                font-size: 32px;
-            }
-            .text-3{
-                text-align: left;
-            }
-            #link a{
-                color: aliceblue;
-                text-decoration: none;
-            }
-            a{
-                color: green;
-            }
-            #image img{
-                width: 30%;
-                background-color: lightcoral;
-                padding: 4px;
-                border-radius: 3px;
-            }
-        </style>
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
         <div id="container">
@@ -121,8 +63,9 @@
                 </ul>
             </div>
             <small>節錄自<a href="https://fitnesstwenty.com/benefits-of-workout/">https://fitnesstwenty.com/benefits-of-workout/</a></small>
+            <hr>
             <div class="sub-title">一天所需卡路里</div>
-            <table border="1">
+            <table border="3">
                 <thead>
                     <tr>
                         <th>每天活動量</th>
@@ -152,31 +95,35 @@
                     </tr>
                 </tbody>
             </table>
-            <p>
+            <p style="text-align: left">
                 <b>計算BMI:</b>
                 一位民眾身高160公分，體重65公斤，BMI25.4kg/m2(=65÷1.6÷1.6)，體重屬於「過重」。<br>
                 <b>計算所需熱量:</b>
                 因他的工作為坐辦公室，屬輕量工作，每天攝取熱量應在1300至1625大卡之間(=20~25大卡*65公斤)。<br>
-                <a href="./BMI.html">計算BMI</a>
             </p>
+            <a href="./BMI.html">計算BMI</a>
             <hr>
             <div class="sub-title">健身影片</div>
-            <iframe width="46%" height="480" src="https://www.youtube.com/embed/20uf1EcGqjY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe width="46%" height="480" src="https://www.youtube.com/embed/qGf1-usZ0Fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video">
+                <iframe width="46%" height="480" src="https://www.youtube.com/embed/20uf1EcGqjY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="46%" height="480" src="https://www.youtube.com/embed/qGf1-usZ0Fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
             <hr>
             <div class="sub-title">索取資料</div>
-            <p>
-                <form action="" method="get">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="請輸入Email">
-                    <br><br>
-                    <label for="suggest">意見回饋</label>
-                    <br>
-                    <textarea name="suggest" id="suggest" cols="28" rows="20" placeholder="請輸入您的建議"></textarea>
-                    <br>
-                    <button type="submit">確定</button>
-                </form>
-            </p>
+            <form action="" method="get">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="請輸入Email">
+                <br>
+                <label for="phone">Phone</label>
+                <input type="unmber" name="phone" id="phone" placeholder="請輸入電話號碼">
+                <br><br>
+                <label for="suggest">意見回饋</label>
+                <br>
+                <textarea name="suggest" id="suggest" cols="28" rows="20" placeholder="請輸入您的建議"></textarea>
+                <br>
+                <button type="submit" class="my-button">確定</button>
+                <input type="reset" class="my-button">
+            </form>
         </div>
     </body>
 </html>
